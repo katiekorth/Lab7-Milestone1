@@ -33,6 +33,7 @@ public class App extends Application {
 
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel1);
+            manager.createNotificationChannel(channel2);
         }
     }
 }

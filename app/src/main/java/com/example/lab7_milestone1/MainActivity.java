@@ -16,14 +16,16 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     private NotificationManagerCompat notificationManager;
-    private EditText editTextTitle = findViewById(R.id.editTextTitle);
-    private EditText editTextMessage = findViewById(R.id.editTextMessage);
+    private EditText editTextTitle;
+    private EditText editTextMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        editTextTitle = findViewById(R.id.editTextTitle);
+        editTextMessage = findViewById(R.id.editTextMessage);
         notificationManager = NotificationManagerCompat.from(this);
     }
 
@@ -54,6 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .build();
 
-        notificationManager.notify(1, notification);
+        notificationManager.notify(2, notification);
     }
 }
